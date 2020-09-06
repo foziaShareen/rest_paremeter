@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>rest parameters</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<body>
+  <!-- first of all we will see how define functions in es5  -->
+ <script>
+function addition(a,b)
+{
+    console.log(a+b);
+}
+// note down we have passed two parametr a and b but when we wil call the function
+// we will pass 5 arguments, I mean more than two parametrs.
+// addition(3,5,6,7,8,);
+// now comment above code and write newone as per es6
+//in rest we can use for loop to get the numbers
+function addition(...inputs)
+{
+    console.log(...inputs);
+    let total = 0;
+    for (let i of inputs)
+    {
+        total=total+=i;
+
+    }
+console.log(total);
+}
+addition(23,3,55,6,7,8);
+
+ </script>   
+</body>
+</html>
